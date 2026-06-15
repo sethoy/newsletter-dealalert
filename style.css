@@ -1,0 +1,641 @@
+/* --- Global Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #fcfcfc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Header Styles --- */
+.site-header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.logo img {
+  height: 40px; /* Adjust based on your actual logo size */
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #43b02a;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  padding: 5px 15px;
+  width: 250px;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 13px;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.btn-green {
+  background-color: #43b02a; /* Main green color */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-green:hover {
+  background-color: #368e22;
+}
+
+/* --- Hero Section Styles --- */
+.hero-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  /*background: linear-gradient(135deg, #42aa1e 40%, #8be854 100%);*/ /* Green gradient background */
+  background-image: url(images/banner.png);
+  border-radius: 8px; /* Optional: adds rounded corners to the hero block */
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+}
+
+/* Background patterns (coins, gifts) can be set as a background image here if you have the asset */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  color: #ffffff;
+  max-width: 50%;
+}
+
+.hero-subheading {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #43b02a;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-white:hover {
+  opacity: 0.9;
+}
+
+.hero-image {
+  max-width: 45%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0 0 8px 0; /* Adjust depending on how the image is cut */
+}
+
+/* --- Next Section (Top Deals) --- */
+.top-deals-section {
+  padding: 40px 0;
+}
+
+.top-deals-section h2 {
+  font-size: 20px;
+  color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .hero-container {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .hero-image {
+    max-width: 80%;
+    justify-content: center;
+  }
+}
+/* --- Utilities --- */
+.mt-40 {
+  margin-top: 40px;
+}
+
+/* --- Categories Section Styles --- */
+.categories-section {
+  padding: 40px 0 80px 0;
+  background-color: #fcfcfc; /* Matches the site background */
+}
+
+.section-heading {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.categories-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.category-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  /* Replicates the distinct drop shadow from the image */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); 
+  display: flex;
+  align-items: center;
+  padding: 30px 25px;
+  flex: 1; /* Ensures all three cards take up equal width */
+  gap: 20px;
+}
+
+.card-icon {
+  flex: 0 0 90px; /* Fixed width for the icon container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  color: #555555;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.btn-see-deals {
+  background-color: #43b02a; /* Main green color */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.btn-see-deals:hover {
+  background-color: #368e22;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .categories-grid {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .category-card {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+/* --- Blog Section Styles (Updated) --- */
+.blog-section {
+  max-width: 1200px; /* Matches the width of your other containers */
+  margin: 40px auto; /* Centers the block and creates the white space on the sides */
+  background-color: #e7f5d3; 
+  padding: 60px 40px; /* Adds padding inside the green box so content doesn't touch the edge */
+  border-radius: 20px; /* Adds the rounded corners visible in the screenshot */
+}
+
+/* Removes the default container padding inside this specific section so we don't double up */
+.blog-section .container {
+  padding: 20px;
+  max-width: 100%;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ... keep the rest of the blog CSS exactly the same ... */
+/* --- Blog Section Styles --- */
+.blog-section {
+  background-color: #e7f5d3; /* Soft pale green background matching the design */
+  padding: 60px 0;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.blog-heading {
+  color: #5bb326; /* Vibrant green matching 'The Real Deal' */
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.blog-subheading {
+  font-size: 14px;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Typography for Posts */
+.post-category {
+  display: block;
+  font-size: 11px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.post-title {
+  font-family: 'Georgia', serif;
+  color: #2a3b2c;
+  font-weight: normal;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.post-title.large {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.list-post .post-title {
+  font-size: 18px;
+}
+
+.post-meta {
+  display: block;
+  font-size: 10px;
+  color: #777;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+/* Top Row: Featured & Sidebar */
+.blog-top-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.featured-post {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.post-excerpt {
+  font-size: 14px;
+  color: #444;
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.btn-read-more {
+  display: inline-block;
+  border: 1px solid #7cb342;
+  color: #555;
+  text-decoration: none;
+  padding: 8px 20px;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-read-more:hover {
+  background-color: #7cb342;
+  color: #fff;
+}
+
+/* Sidebar & Bottom Grid Posts */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05); /* Subtle separator if needed */
+  padding-top: 40px;
+}
+
+.list-post {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.list-post img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Text-only variant for rows without images */
+.list-post.text-only {
+  padding-left: 0;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 60px;
+}
+
+.page-num {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #333333;
+  padding: 5px 12px;
+  font-size: 12px;
+  border-radius: 2px;
+  transition: background-color 0.2s;
+}
+
+.page-num.active,
+.page-num:hover {
+  background-color: #fcfcfc; /* White background for active state */
+  color: #333333;
+  border: 1px solid #ccc;
+  padding: 4px 11px; /* Account for border to prevent layout shift */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .blog-top-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-post {
+    flex-direction: column;
+  }
+  
+  .list-post img {
+    width: 100%;
+    height: 200px;
+  }
+}
+/* --- Promo Banner Section Styles --- */
+.promo-section {
+  padding: 40px 0 80px 0;
+}
+
+.promo-banner {
+  background-color: #9ff155; /* Lime green background */
+  /* If you have the background pattern, uncomment the next lines */
+  /* background-image: url('money-pattern-bg.png'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px 50px;
+  margin-top: 50px; /* Ensures space above for the overhanging tags */
+}
+
+/* Overhanging Tags */
+.promo-tags {
+  position: absolute;
+  left: 50px;
+  top: -45px; /* Pulls the image up so it overlaps the top edge */
+  width: 160px;
+  z-index: 10;
+}
+
+.promo-tags img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Banner Content */
+.promo-content {
+  margin-left: 200px; /* Creates space so the text doesn't hide behind the absolute positioned tags */
+  z-index: 2;
+  flex: 1;
+}
+
+.promo-subtitle {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  color: #2a3b2c; /* Dark text */
+  margin-bottom: 5px;
+}
+
+.promo-title {
+  font-family: Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff; /* White text */
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Banner Button */
+.promo-cta {
+  z-index: 2;
+}
+
+.btn-green-solid {
+  background-color: #3ca920; /* Darker green for contrast */
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.btn-green-solid:hover {
+  background-color: #2f8718;
+}
+
+/* --- Call Us Section --- */
+.call-us-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.call-us-cta p {
+  font-family: 'Georgia', serif;
+  font-size: 34px;
+  color: #2a2a3b; /* Matches the dark navy/grey text */
+  margin: 0;
+}
+
+.call-us-cta a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.call-us-cta a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .promo-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 30px 40px; /* Extra top padding for tags */
+  }
+
+  .promo-tags {
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+  }
+
+  .promo-content {
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+
+  .call-us-cta p {
+    font-size: 26px;
+  }
+}
